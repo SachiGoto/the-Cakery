@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Page</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/gh/hoomanbahreini/bootstrap-half-and-quarter-grid/fractional-grid.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://www.marcoguglie.it/Codepen/RoundedAnimatedNav/js/velocity.min.js"></script>
+    <script src="./theCakery.js" defer></script>
+  </head>
+  <style>
+    .btn {
+      width: 10rem !important;
+    }
+
+    h3 {
+      text-align: center;
+    }
+
+    .container {
+      width: 95% !important;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .productBox {
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+
+    .productBox h3 {
+      font-size: 1.3rem !important;
+    }
+
+    .featureItem1 {
+      background-image: url("./img/easterCupcakeWFrame.png");
+    }
+
+    h4 {
+      font-size: 1rem;
+    }
+
+    .itemContainer:nth-child(odd) {
+      position: relative;
+
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      animation: mymove 2s infinite;
+    }
+
+    .itemContainer:nth-child(even) {
+      position: relative;
+
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      animation: mymove 3s infinite;
+    }
+
+    @keyframes mymove {
+      0% {
+        top: 0px;
+      }
+      50% {
+        top: -8px;
+      }
+      100% {
+        top: 0px;
+      }
+    }
+
+    .productContainer {
+      position: relative;
+
+      height: 150px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .featureItem2 {
+      background-image: url(./img/valentineFrame.png);
+    }
+
+    .featureItem3 {
+      background-image: url(./img/patrickDayFrame.png);
+    }
+
+    .featureItem4 {
+      background-image: url(./img/truckConvoyCookies.png);
+    }
+
+    .featureItem5 {
+      background-image: url(./img/bargeCakeFrame.png);
+    }
+
+    .front {
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    .back {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background-image: url(./img/emptyFrame.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .back p {
+      padding-left: 0px !important;
+    }
+
+    .row {
+      --bs-gutter-x: 0;
+    }
+
+    .productBox {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .productBack {
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      background-image: url(./img/emptyFrame.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    .productFront {
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    #pastry1 {
+      background-image: url("./img/chocolateCookiesFrame.png");
+    }
+
+    #pastry2 {
+      background-image: url("./img/muffinsFrame.png");
+    }
+
+    #pastry3 {
+      background-image: url("./img/danishesFrame.png");
+    }
+
+    #pastry4 {
+      background-image: url("./img/croissantFrame.png");
+    }
+
+    #pastry5 {
+      background-image: url("./img/bunsFrame.png");
+    }
+
+    #pastry6 {
+      background-image: url("./img/birthdayDonutsFrame.png");
+    }
+
+    #cake1 {
+      background-image: url("./img/strawberryCakeFrame.png");
+    }
+
+    #cake2 {
+      background-image: url("./img/chocolateCakeFrame.png");
+    }
+
+    #cake3 {
+      background-image: url("./img/swissRollFrame.png");
+    }
+
+    #pie1 {
+      background-image: url("./img/limePieFrame.png");
+    }
+
+    #pie2 {
+      background-image: url("./img/chocolatePieFrame.png");
+    }
+
+    #pie3 {
+      background-image: url("./img/cloud9Frame.png");
+    }
+
+    .strawberryBtnz-index {
+      z-index: 1;
+      margin-top: -3px;
+    }
+
+    .bgZ-index {
+      z-index: -1;
+    }
+
+    .imgZ-index {
+      z-index: 2;
+    }
+
+      .itemContainer:nth-child(odd) {
+        height: 250px;
+      }
+
+      .itemContainer:nth-child(even) {
+        height: 250px;
+      }
+
+      .back {
+        padding-top: 10vh;
+      }
+
+      .back p {
+        margin-left: 10%;
+        margin-right: 10%;
+      }
+
+      .front {
+        width: 250px;
+        height: 250px;
+      }
+
+      .productContainer {
+        width: 100%;
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 250px;
+        align-items: center;
+        margin-top: 100px;
+      }
+
+      .pastryContent {
+        margin-top: 8vh;
+      }
+
+      .content h3 {
+        font-size: 2rem !important;
+      }
+
+      .content p {
+        text-align: center;
+      }
+
+      .productBox {
+        height: 360px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .productBox h3 {
+        font-size: 2rem !important;
+        margin-bottom: 22px;
+      }
+
+      .productBox h4 {
+        font-size: 27px !important;
+      }
+
+
+      h1 {
+        font-size: 40px !important;
+      }
+
+      .productFront {
+        width: 300px;
+        height: 300px;
+      }
+
+
+      .strawberryBtnz-index {
+        width: 30%;
+      }
+
+      h3 {
+        font-size: 2rem !important;
+      }
+    
+
+    @media (min-width: 1000px) {
+
+      h1 {
+        padding-top: 0%;
+      }
+
+      .front {
+        width: 280px;
+        height: 280px;
+        opacity: 1;
+        backface-visibility: hidden;
+        transition: 2s ease;
+        position: absolute;
+      }
+
+      .back {
+        width: 280px;
+        height: 280px;
+        opacity: 1;
+        backface-visibility: hidden;
+        transition: 2s ease;
+        position: absolute;
+        transform: rotateY(180deg);
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+      }
+      .back h3 {
+        position: absolute;
+        top: 10vh;
+      }
+
+      .back .btn {
+        position: absolute;
+        top: 23vh;
+        left: 9vh;
+        font-size: 22px;
+      }
+
+      .back .btn a {
+        font-size: 18px;
+      }
+
+      .itemContainer {
+        position: absolute;
+        height: 280px;
+        transform-style: preserve-3d;
+        transition: all 1s ease;
+      }
+
+
+      .flip {
+        transform: rotateY(180deg);
+        transition: all 2s ease;
+      }
+
+      .itemContainer {
+        margin-top: 30px;
+        cursor: pointer;
+      }
+
+      .itemContainer:hover .front {
+        opacity: 0.5;
+      }
+
+
+      .itemContainer p {
+        text-align: center;
+        width: 80%;
+      }
+
+      .itemContainer h3 {
+        width: 100%;
+      }
+
+
+      .productBack {
+        width: 300px;
+        height: 300px;
+        backface-visibility: hidden;
+        position: absolute;
+        padding-top: 7vh;
+      }
+
+      .productBack p {
+        font-size: 15px;
+        padding: 0px;
+        margin: 0px;
+      }
+
+      .productBack a {
+        font-size: 18px;
+      }
+
+      .productBack .btn {
+        height: 2.5rem !important;
+        margin-top: 10px;
+      }
+
+      .productFront {
+        width: 300px;
+        height: 300px;
+        position: absolute;
+        backface-visibility: hidden;
+        transition: all 2s ease;
+      }
+
+      .productContainer {
+        position: relative;
+        width: 300px;
+        height: 300px;
+      }
+
+      .productContainer:hover .productFront {
+        transform: rotateY(180deg);
+        transition: all 2s ease;
+        transform-style: preserve-3d;
+      }
+      .content {
+        display: none;
+      }
+
+      h2 {
+        margin-bottom: 20px !important;
+      }
+
+      #cakesPies {
+        height: 10vw;
+        align-items: end;
+      }
+
+      .strawberryBtnz-index {
+        font-size: 22px;
+      }
+
+      .wavyB {
+        height: 21vw;
+      }
+    }
+
+  </style>
+  <body>
+    <nav>
+      <ul class="cd-primary-nav">
+        <li><a href="./index.html">The Cakery</a></li>
+        <li><a href="./about.html">About Us</a></li>
+        <li><a href="./product.html">Products</a></li>
+        <li><a href="./gallery.html">Gallery</a></li>
+        <li><a href="./contactpage.html">Contact Us</a></li>
+        <li class="socialMediaIconNav">
+          <i class="fa-brands fa-instagram"></i
+          ><i class="fa-brands fa-twitter"></i
+          ><i class="fa-brands fa-facebook-f"></i
+          ><i class="fa-brands fa-pinterest-p"></i>
+        </li>
+        <div class="d-flex justify-content-center">
+          <img src="./img/theCakeryLogo.svg" width="140" />
+        </div>
+      </ul>
+    </nav>
+
+    <header clas="row" id="headerIcons">
+      <div class="column col-4">
+        <a href="#0" class="cd-nav-trigger"
+          >Menu<span class="cd-icon"></span
+        ></a>
+      </div>
+      <div class="col-4 column">
+        <img class="logoSize" src="./img/theCakeryLogo.svg" />
+      </div>
+
+      <div class="col-4 column">
+        <img id="cartIcon" src="./img/shoppingCartIcon.png" width="30" />
+      </div>
+    </header>
+
+    <div class="cd-overlay-nav">
+      <span></span>
+    </div>
+    <!-- cd-overlay-nav -->
+
+    <div class="cd-overlay-content">
+      <span></span>
+    </div>
+    <!-- cd-overlay-content -->
+
+    <div class="row">
+      <h1 id="title" class="mt-3">Our newest and wackiest creations!</h1>
+    </div>
+    <div class="wavyT" id="firstWavyT"></div>
+
+    <div class="bigContainer p-0">
+      <section class="container">
+        <div class="row">
+          <div class="content mb-5 col-6 col-lg-4">
+            <h3>Easter Surprise Muffins</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <button class="btn">
+              <a href="#"
+                >Add <br />
+                to basket</a
+              >
+            </button>
+          </div>
+
+          <div class="itemContainer mb-5 col-6 col-lg-4">
+            <div class="back d-none d-lg-block">
+              <h3 class="pt-2">Easter Surprise Muffins</h3>
+              <button class="btn"><a href="#">Add to basket</a></button>
+            </div>
+            <div class="featureItem1 front"></div>
+          </div>
+
+          <div class="itemContainer mb-5 col-6 col-lg-4">
+            <div class="back d-none d-lg-block">
+              <h3>You are my Valenpie!</h3>
+              <button class="btn"><a href="#">Add to basket</a></button>
+            </div>
+
+            <div class="featureItem2 front"></div>
+          </div>
+
+          <div class="content mb-5 col-6 col-lg-4">
+            <h3>You are my Valenpie!</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <button class="btn">
+              <a href="#"
+                >Add <br />
+                to basket</a
+              >
+            </button>
+          </div>
+
+          <div class="content mb-5 col-6 col-lg-4">
+            <h3>St.Paddy's Day</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <button class="btn">
+              <a href="#"
+                >Add <br />
+                to basket</a
+              >
+            </button>
+          </div>
+
+          <div class="itemContainer mb-5 col-6 col-lg-4">
+            <div class="back d-none d-lg-block">
+              <h3 class="pt-3">St.Paddy's Day</h3>
+              <button class="btn"><a href="#">Add to basket</a></button>
+            </div>
+            <div class="featureItem3 front"></div>
+          </div>
+
+          <div class="itemContainer mb-5 col-6 col-lg-6">
+            <div class="back d-none d-lg-block">
+              <h3>Freedom <br />convoy cookies</h3>
+              <button class="btn"><a href="#">Add to basket</a></button>
+            </div>
+
+            <div class="featureItem4 front"></div>
+          </div>
+
+          <div class="content mb-5 col-6 col-lg-6">
+            <h3>Freedom convoy cookies</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <button class="btn">
+              <a href="#"
+                >Add <br />
+                to basket</a
+              >
+            </button>
+          </div>
+
+          <div class="content mb-5 col-6 col-lg-6">
+            <h3>Barge Chilling Cake</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <button class="btn">
+              <a href="#"
+                >Add <br />
+                to basket</a
+              >
+            </button>
+          </div>
+
+          <div id="featureItem5" class="itemContainer mb-5 col-6 col-lg-6">
+            <div class="back d-none d-lg-block">
+              <h3 class="pt-2">Barge Chilling Cake</h3>
+              <button class="btn"><a href="#">Add to basket</a></button>
+            </div>
+            <div id="featureItem5Front" class="featureItem5 front"></div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="wavyB"></div>
+
+    <div class="row">
+      <h1>Our proud pastries</h1>
+    </div>
+    <div class="wavyT"></div>
+    <div class="bigContainer">
+      <section class="container">
+        <div class="row">
+          <div class="col-12 col-md-6 productBox">
+            <h3>Cookies</h3>
+            <div class="productContainer">
+              <div class="d-none d-lg-block productBack">
+                <h4>Flavours</h4>
+                <p>Chocolate chop</p>
+                <p>Peanut Butter</p>
+
+                <p>Oatmeal Raisin</p>
+                <p>Vanilla</p>
+
+                <button class="btn"><a href="#">Add to Basket</a></button>
+              </div>
+
+              <div class="productFront" id="pastry1"></div>
+            </div>
+          </div>
+
+          <div class="pastryContent col-12 col-md-6 d-lg-none productBox">
+            <h4>Flavours</h4>
+            <p>Chocolate chop / Peanut Butter</p>
+
+            <p>Oatmeal Raisin / Vanilla</p>
+
+            <button class="btn btn-primary">Add to Basket</button>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-6 productBox">
+            <h3>Muffins</h3>
+
+            <div class="productContainer">
+              <div class="productBack d-none d-lg-block">
+                <h4>Flavours</h4>
+                <p>Chocolate chop</p>
+                <p>Red velvet</p>
+
+                <p>Poppy seeds</p>
+                <p>Blueberry</p>
+
+                <button class="btn"><a href="#">Add to Basket</a></button>
+              </div>
+              <div class="productFront" id="pastry2"></div>
+            </div>
+          </div>
+
+          <div class="col-12 pastryContent col-md-6 d-lg-none productBox">
+            <h4>Flavours</h4>
+            <p>Chocolate / Red velvet</p>
+
+            <p>Poppy seeds / Blueberry</p>
+
+            <button class="btn btn-primary">Add to Basket</button>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-6 productBox">
+            <h3>Danishes</h3>
+            <div class="productContainer">
+              <div class="productBack d-none d-lg-block">
+                <h4>Flavours</h4>
+                <p>Strawberry & Rhubarb</p>
+                <p>Blueberry & Creamcheese</p>
+
+                <p>Maple peacan</p>
+
+                <button class="btn"><a href="#">Add to Basket</a></button>
+              </div>
+              <div class="productFront" id="pastry3"></div>
+            </div>
+          </div>
+
+          <div class="pastryContent col-12 col-md-6 d-lg-none productBox">
+            <h4>Flavours</h4>
+            <p>Strawberry & Rhubarb</p>
+
+            <p>Blueberry & Creamcheese / Maple peacan</p>
+
+            <button class="btn btn-primary">Add to Basket</button>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-6 productBox">
+            <h3>Croissants</h3>
+            <div class="productContainer">
+              <div class="productBack d-none d-lg-block">
+                <h4>Flavours</h4>
+                <p>Plain</p>
+                <p>Chocolate</p>
+                <p>Almond</p>
+
+                <button class="btn"><a href="#">Add to Basket</a></button>
+              </div>
+              <div class="productFront" id="pastry4"></div>
+            </div>
+          </div>
+
+          <div
+            class="d-lg-none pastryContent col-12 col-md-6 d-lg-none productBox"
+          >
+            <h4>Flavours</h4>
+            <p>Plain/ Chocolate/ Almond</p>
+            <button class="btn btn-primary">Add to Basket</button>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-6 productBox">
+            <h3>Buns</h3>
+            <div class="productContainer">
+              <div class="productBack d-none d-lg-block">
+                <h4>Flavours</h4>
+                <p>Whole wheat</p>
+                <p>sesame seeds</p>
+                <p>Cinnamon</p>
+
+                <button class="btn"><a href="#">Add to Basket</a></button>
+              </div>
+              <div class="productFront" id="pastry5"></div>
+            </div>
+          </div>
+
+          <div
+            class="d-lg-none pastryContent col-12 col-md-6 d-lg-none productBox"
+          >
+            <h4>Flavours</h4>
+            <p>Plain/ Raisin/ Whole wheat</p>
+            <p>sesame seeds/ Cinnamon</p>
+            <button class="btn btn-primary">Add to Basket</button>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-6 productBox">
+            <h3>Happy Birthday Donuts</h3>
+            <div class="productContainer">
+              <div class="productBack d-none d-lg-block">
+                <h4 class="mt-3">Special donuts!</h4>
+                <p>Let donuts deliver your message!</p>
+                <p>
+                  Nothing sweeter than say it<br />
+                  with donuts!
+                </p>
+
+                <button class="btn"><a href="#">Add to Basket</a></button>
+              </div>
+
+              <div class="productFront" id="pastry6"></div>
+            </div>
+          </div>
+
+          <div
+            class="d-lg-none pastryContent col-12 col-md-6 d-lg-none productBox"
+          >
+            <h4>Special donuts!</h4>
+            <p>Let donuts deliver your message!</p>
+            <p>
+              Nothing sweeter than say it<br />
+              with donuts!
+            </p>
+            <button class="mt-2 btn btn-primary">Add to Basket</button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="wavyB"></div>
+
+    <div class="mb-5 row">
+      <div class="d-flex flex-column align-items-center">
+        <h3>Something else in mind?</h3>
+        <div class="imgZ-index">
+          <img src="./img/choc_straw_drip.png" width="150" />
+        </div>
+        <button class="btn strawberryBtnz-index">
+          <a href="contactpage.html"> Request Us!</a>
+        </button>
+      </div>
+    </div>
+
+    <div id="cakesPies" class="d-flex justify-content-center">
+      <h1>Cakes & Pies</h1>
+    </div>
+    <div class="wavyT"></div>
+    <div class="bigContainer">
+      <section class="container">
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-6 productBox">
+            <div class="productContainer">
+              <div class="productBack d-none d-lg-block">
+                <h3>
+                  Strawberry<br />
+                  is precious
+                </h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <button class="btn"><a href="#">Add to Basket</a></button>
+              </div>
+              <div class="productFront" id="cake1"></div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 d-lg-none productBox">
+            <h3>Strawberry is precious</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <button class="btn btn-primary">Add to Basket</button>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-6 productBox pt-5">
+            <div class="productContainer">
+              <div class="productBack d-none d-lg-block">
+                <h3>My Choco pie</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <button class="btn"><a href="#">Add to Basket</a></button>
+              </div>
+              <div class="productFront" id="cake2"></div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 d-lg-none productBox">
+            <h3>My Choco pie</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <button class="btn btn-primary">Add to Basket</button>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-6 pt-5 productBox">
+            <div class="productContainer">
+              <div class="productBack d-none d-lg-block">
+                <h3>Pretty <br />please roll</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <button class="btn"><a href="#">Add to Basket</a></button>
+              </div>
+
+              <div class="productFront" id="cake3"></div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 d-lg-none productBox">
+            <h3>Pretty please roll</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <button class="btn btn-primary">Add to Basket</button>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-6 pt-5 productBox">
+            <div class="productContainer">
+              <div class="productBack d-none d-lg-block">
+                <h3>Lemon pie <br />in the sky</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <button class="btn"><a href="#">Add to Basket</a></button>
+              </div>
+
+              <div class="productFront" id="pie1"></div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 d-lg-none productBox">
+            <h3>Lemon Pie in the sky</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <button class="btn btn-primary">Add to Basket</button>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-6 pt-5 productBox">
+            <div class="productContainer">
+              <div class="productBack d-none d-lg-block">
+                <h3>Who doesn't <br />like Chocolate</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <button class="btn"><a href="#">Add to Basket</a></button>
+              </div>
+              <div class="productFront" id="pie2"></div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 d-lg-none productBox">
+            <h3>Who doesn't like Chocolate</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <button class="btn btn-primary">Add to Basket</button>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-6 pt-5 productBox">
+            <div class="productContainer">
+              <div class="productBack d-none d-lg-block">
+                <h3>Cloud9</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <button class="btn"><a href="#">Add to Basket</a></button>
+              </div>
+              <div class="productFront" id="pie3"></div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 d-lg-none productBox">
+            <h3>Cloud 9 Pie</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <button class="btn btn-primary">Add to Basket</button>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="wavyB"></div>
+
+    <div class="row">
+      <div class="d-flex flex-column align-items-center">
+        <h3>Looking for a customized cake for a special event?</h3>
+        <div class="imgZ-index">
+          <img src="./img/choc_straw_drip.png" width="150" />
+        </div>
+        <button class="btn strawberryBtnz-index">
+          <a href="./contactpage.html">Email Us!</a>
+        </button>
+      </div>
+    </div>
+
+    <div class="footerT"></div>
+
+    <footer>
+      <div class="footer footerContainer">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 column">
+            <img id="footerLogo" src="./img/theCakeryLogo.svg" />
+          </div>
+
+          <div
+            class="col-lg-4 d-none d-lg-block justify-content-center flex-column text-center"
+          >
+            <h3>Quick Links</h3>
+            <p>About the Cakery</p>
+            <p>Gallery</p>
+            <p>Products</p>
+            <p>Contact Us</p>
+          </div>
+
+          <div
+            class="col-sm-12 col-md-5 col-lg-4 d-flex justify-content-center flex-column text-center"
+          >
+            <h3>Find Us</h3>
+            <p>Address: 398 bute street, Vancouver, BC V6E 1Y9</p>
+            <p>Phone: 604-397-6590</p>
+            <p>Email: theCakery@gmail.com</p>
+          </div>
+
+          <div
+            class="col-sm-12 col-md-5 col-lg-4 justify-content-center flex-column text-center"
+          >
+            <h3>Hours:</h3>
+            <p>Monday to Fridy <br />8am - 4pm</p>
+            <p>
+              Saturday and Sunday<br />
+              8am - 5pm
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script>
+
+      const itemContainer = document.querySelectorAll(".itemContainer");
+
+      let flipCheck = 0;
+      let lastClicked;
+
+      itemContainer.forEach((container) => {
+        container.addEventListener("click", function (e) {
+          if (flipCheck === 0) {
+            let element = e.target.classList[0].slice(-1);
+            element--;
+            lastClicked = element;
+            itemContainer[element].classList.add("flip");
+            flipCheck = 1;
+          } else {
+            itemContainer.forEach((container) =>
+              container.classList.remove("flip")
+            );
+            flipCheck = 0;
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
